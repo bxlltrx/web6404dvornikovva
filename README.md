@@ -7,13 +7,13 @@
 Лабораторная работа №3: Основы JavaScript
 Изучение основ языка программирования JavaScript и применение его для решения простых задач с использованием функций.
 
-*В рамках лабораторной работы требуется реализовать следующий набор функций на языке JavaScript:
-*function isInteger(n) {} - Проверка на целое число
-*function even() {} - Генерация массива четных чисел
-*function sumTo(n) {} - Сумма чисел до заданного (цикл)
-*function recSumTo(n) {} - Сумма чисел до заданного (рекурсия)
-*function factorial(n) {} - Вычисление факториала
-*function isBinary(n) {} - Проверка на степень двойки
-*function fibonacci(n) {} - N-е число Фибоначчи
-*function getOperationFn(initialValue, operatorFn) {} - Функция для выполнения операций
-*function sequence(start, step) {} - Генератор арифметической последовательности
+* `function isInteger(n) {}` - Проверка на целое число
+* `function even() {}` - Генерация массива четных чисел
+* `function sumTo(n) {}` - Сумма чисел до заданного (цикл)
+* `function recSumTo(n) {}` - Сумма чисел до заданного (рекурсия)
+* `function factorial(n) {}` - Вычисление факториала
+* `function isBinary(n) {}` - Проверка на степень двойки
+* `function fibonacci(n) {}` - N-е число Фибоначчи
+* `function getOperationFn(initialValue, operatorFn) {}` - Функция для выполнения операций
+* `function sequence(start, step) {}` - Генератор арифметической последовательности
+* `function deepEqual(firstObject, secondObject) {}` - Глубокое сравнение объектов
