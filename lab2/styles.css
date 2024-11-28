@@ -1,0 +1,222 @@
+/* =============================== Глобальные стили =============================== */
+
+/* Основной шрифт и фон для тела страницы */
+body {
+    font-family: Arial, sans-serif; /* Простой шрифт для тела текста */
+    background-color: #f4f4f4;
+    color: #0c0c0c;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Заголовок h1 на всей странице */
+h1 {
+    font-family: 'Georgia', serif; /* Шрифт с засечками */
+    font-size: 4rem; /* Размер шрифта */
+    color: #141313; /* Цвет текста */
+}
+
+/* =============================== Стили для шапки (header) =============================== */
+
+/* Шапка сайта */
+header {
+    background-color: #ffffff;
+    color: #141313;
+    font-family: 'Georgia', serif;
+    padding: 1rem;
+    font-size: 2rem;
+    text-align: center;
+}
+
+/* =============================== Слоган =============================== */
+
+/* Слоган с фоновым изображением */
+.slogan {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: relative;
+}
+
+/* Стили для изображения на фоне слогана */
+.slogan-image {
+    width: 100%; /* Изображение будет растягиваться на всю ширину блока */
+    height: 100%; /* Изображение будет растягиваться по высоте блока */
+    object-fit: cover; /* Изображение будет обрезаться, если его пропорции не совпадают с блоком */
+    position: absolute; /* Помещаем изображение в фон */
+}
+
+/* Псевдоэлемент для затемнения */
+.slogan::after {
+    content: ''; /* Псевдоэлемент без текста */
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Черное затемнение с прозрачностью */
+    opacity: 0; /* Начальное состояние (не видно) */
+    transition: opacity 0.5s ease; /* Плавный переход */
+}
+
+/* Эффект при наведении на изображение */
+.slogan:hover::after {
+    opacity: 1; /* При наведении на изображение затемнение становится видимым */
+}
+
+/* Текст слогана, по умолчанию скрыт */
+.slogan p {
+    font-size: 2rem;
+    font-style: italic;
+    color: transparent; /* Текст скрыт по умолчанию */
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.8); /* Легкое свечение текста */
+    transition: color 0.5s ease, opacity 0.5s ease; /* Плавный переход для цвета и прозрачности текста */
+    padding: 1rem;
+    position: relative;
+    z-index: 1; /* Помещаем текст поверх изображения */
+    opacity: 0; /* Текст скрыт по умолчанию */
+}
+
+/* Эффект при наведении на слоган */
+.slogan:hover p {
+    color: white; /* Текст становится белым при наведении */
+    opacity: 1; /* Текст становится видимым */
+}
+
+/* =============================== Навигация (nav) =============================== */
+
+/* Стили для ссылок навигации */
+nav a {
+    color: #141414;
+    font-family: "helvetica-neue", sans-serif;
+    text-decoration: none;
+    margin: 0 15px;
+}
+
+/* Эффект при наведении на ссылки */
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* =============================== Основной контент (main) =============================== */
+
+main {
+    padding: 2rem;
+}
+
+/* =============================== Стили для футера (footer) =============================== */
+
+footer {
+    background-color: #ffffff;
+    color: #080808;
+    text-align: center;
+    padding: 1rem;
+    margin-top: auto;
+}
+
+/* =============================== Стили для галереи продукции =============================== */
+
+.product-gallery {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+/* =============================== Стили для таблицы товаров =============================== */
+
+/* Стили для таблицы */
+.product-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+/* Заголовки таблицы */
+.product-table th {
+    background-color: #f4f4f4;
+}
+
+/* Стили для ячеек таблицы */
+.product-table td, .product-table th {
+    padding: 12px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+/* Стили для изображений в таблице */
+.product-table img.thumbnail {
+    width: 80px; /* Размер изображения по умолчанию */
+    height: auto;
+    transition: transform 0.3s ease, z-index 0s linear 0.3s; /* Плавный переход для увеличения */
+    display: block; /* Чтобы избежать пробела под изображением */
+    margin: 0 auto; /* Центрирование изображения по горизонтали */
+}
+
+/* Эффект при наведении на изображения в таблице */
+.product-table img.thumbnail:hover {
+    transform: scale(5); /* Увеличение до 5 раз */
+    position: relative;
+    z-index: 10; /* Помещает изображение поверх других элементов */
+}
+
+/* Скрытие первого столбца (с изображениями) */
+.product-table td:nth-child(1) {
+    width: 120px; /* Устанавливаем ширину для изображений */
+}
+
+.product-table td:nth-child(2) {
+    width: 200px; /* Устанавливаем ширину для названия */
+}
+
+.product-table td:nth-child(3) {
+    width: 300px; /* Устанавливаем ширину для описания */
+}
+
+.product-table td:nth-child(4) {
+    width: 120px; /* Устанавливаем ширину для цены */
+}
+
+/* =============================== Брендовая секция =============================== */
+
+/* Сдвиг текста вправо от изображений */
+.brand-section img {
+    width: 40%;
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+    margin-right: 2rem;
+}
+
+/* Стили для секции бренда */
+.brand-section {
+    padding: 4rem 2rem;
+    background-color: #ffffff;
+    margin-bottom: 3rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* History, Fashion and Influence, Style */
+.brand-section h2 {
+    font-size: 2.5rem;
+    color: #141313;
+    margin-bottom: 1rem;
+    font-family: "Georgia", serif; /* Для выделения заголовков */
+}
+
+/* Стили для текста внутри секции бренда */
+.brand-section p {
+    font-size: 3rem;
+    line-height: 1.7;
+    color: #333;
+    font-family: "Georgia", serif;
+    margin-bottom: 1.5rem;
+}
+
+/* Стили для контейнера текста и изображения в секции бренда */
+.brand-section .content {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 2rem; /* Отступ между изображением и текстом */
+}
