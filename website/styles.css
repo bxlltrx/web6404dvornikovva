@@ -1,10 +1,6 @@
-h1 {
-    font-family: 'Georgia', serif; /* Шрифт с засечками */
-    font-size: 4rem; /* Размер шрифта */
-    color: #141313; /* Цвет текста */
-}
+/* =============================== Глобальные стили =============================== */
 
-/* Общие стили */
+/* Основной шрифт и фон для тела страницы */
 body {
     font-family: Arial, sans-serif; /* Простой шрифт для тела текста */
     background-color: #f4f4f4;
@@ -14,7 +10,16 @@ body {
     min-height: 100vh;
 }
 
-/* Фон надписи Vivenne Westwood*/
+/* Заголовок h1 на всей странице */
+h1 {
+    font-family: 'Georgia', serif; /* Шрифт с засечками */
+    font-size: 4rem; /* Размер шрифта */
+    color: #141313; /* Цвет текста */
+}
+
+/* =============================== Стили для шапки (header) =============================== */
+
+/* Шапка сайта */
 header {
     background-color: #ffffff;
     color: #141313;
@@ -24,7 +29,9 @@ header {
     text-align: center;
 }
 
-/* Слоган */
+/* =============================== Слоган =============================== */
+
+/* Слоган с фоновым изображением */
 .slogan {
     display: flex;
     justify-content: center;
@@ -33,12 +40,12 @@ header {
     position: relative;
 }
 
+/* Стили для изображения на фоне слогана */
 .slogan-image {
     width: 100%; /* Изображение будет растягиваться на всю ширину блока */
     height: 100%; /* Изображение будет растягиваться по высоте блока */
     object-fit: cover; /* Изображение будет обрезаться, если его пропорции не совпадают с блоком */
     position: absolute; /* Помещаем изображение в фон */
-
 }
 
 /* Псевдоэлемент для затемнения */
@@ -75,11 +82,10 @@ header {
     color: white; /* Текст становится белым при наведении */
     opacity: 1; /* Текст становится видимым */
 }
-header h1 {
-    font-size: 2.5rem;
-}
 
-/* Навигация */
+/* =============================== Навигация (nav) =============================== */
+
+/* Стили для ссылок навигации */
 nav a {
     color: #141414;
     font-family: "helvetica-neue", sans-serif;
@@ -87,7 +93,19 @@ nav a {
     margin: 0 15px;
 }
 
-/* Стили для футера */
+/* Эффект при наведении на ссылки */
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* =============================== Основной контент (main) =============================== */
+
+main {
+    padding: 2rem;
+}
+
+/* =============================== Стили для футера (footer) =============================== */
+
 footer {
     background-color: #ffffff;
     color: #080808;
@@ -96,14 +114,7 @@ footer {
     margin-top: auto;
 }
 
-nav a:hover {
-    text-decoration: underline;
-}
-
-/* Основной контент */
-main {
-    padding: 2rem;
-}
+/* =============================== Стили для галереи продукции =============================== */
 
 .product-gallery {
     display: flex;
@@ -112,19 +123,27 @@ main {
     gap: 2rem;
 }
 
-p {
-    font-size: 1rem;
-    margin-bottom: 0.5rem;
+/* =============================== Стили для таблицы товаров =============================== */
+
+/* Стили для таблицы */
+.product-table {
+    width: 100%;
+    border-collapse: collapse;
 }
 
-
-.product-table img.thumbnail:hover {
-    transform: scale(5); /* Увеличение до 2 раз */
-    position: relative;
-    z-index: 10; /* Помещает изображение поверх других элементов */
+/* Заголовки таблицы */
+.product-table th {
+    background-color: #f4f4f4;
 }
 
-/* Стили для изображения в таблице */
+/* Стили для ячеек таблицы */
+.product-table td, .product-table th {
+    padding: 12px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+/* Стили для изображений в таблице */
 .product-table img.thumbnail {
     width: 80px; /* Размер изображения по умолчанию */
     height: auto;
@@ -133,22 +152,11 @@ p {
     margin: 0 auto; /* Центрирование изображения по горизонтали */
 }
 
-/* Стили таблицы */
-.product-table {
-    width: 100%;
-    border-collapse: collapse;
-}
-
-/* Стиль для ячеек */
-.product-table td, .product-table th {
-    padding: 12px;
-    border: 1px solid #ddd;
-    text-align: left;
-}
-
-/* Заголовки таблицы */
-.product-table th {
-    background-color: #f4f4f4;
+/* Эффект при наведении на изображения в таблице */
+.product-table img.thumbnail:hover {
+    transform: scale(5); /* Увеличение до 5 раз */
+    position: relative;
+    z-index: 10; /* Помещает изображение поверх других элементов */
 }
 
 /* Скрытие первого столбца (с изображениями) */
@@ -168,6 +176,9 @@ p {
     width: 120px; /* Устанавливаем ширину для цены */
 }
 
+/* =============================== Брендовая секция =============================== */
+
+/* Сдвиг текста вправо от изображений */
 .brand-section img {
     width: 40%;
     height: auto;
@@ -176,6 +187,7 @@ p {
     margin-right: 2rem;
 }
 
+/* Стили для секции бренда */
 .brand-section {
     padding: 4rem 2rem;
     background-color: #ffffff;
@@ -184,7 +196,7 @@ p {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* History ... */
+/* History, Fashion and Influence, Style */
 .brand-section h2 {
     font-size: 2.5rem;
     color: #141313;
@@ -192,7 +204,7 @@ p {
     font-family: "Georgia", serif; /* Для выделения заголовков */
 }
 
-/* Стили для текста внутри секции */
+/* Стили для текста внутри секции бренда */
 .brand-section p {
     font-size: 3rem;
     line-height: 1.7;
@@ -201,11 +213,10 @@ p {
     margin-bottom: 1.5rem;
 }
 
-/* Стили для контейнера текста и изображения (контент слева/справа) */
+/* Стили для контейнера текста и изображения в секции бренда */
 .brand-section .content {
     display: flex;
     justify-content: flex-start;
     align-items: center;
     gap: 2rem; /* Отступ между изображением и текстом */
 }
-
