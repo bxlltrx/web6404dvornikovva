@@ -1,10 +1,3 @@
-/* Сброс отступов и границ */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 h1 {
     font-family: 'Georgia', serif; /* Шрифт с засечками */
     font-size: 4rem; /* Размер шрифта */
@@ -20,6 +13,7 @@ body {
     flex-direction: column;
     min-height: 100vh;
 }
+
 /* Фон надписи Vivenne Westwood*/
 header {
     background-color: #ffffff;
@@ -30,7 +24,6 @@ header {
     text-align: center;
 }
 
-
 /* Слоган */
 .slogan {
     display: flex;
@@ -38,8 +31,6 @@ header {
     align-items: center;
     height: 100vh;
     position: relative;
-    text-align: center;
-    overflow: hidden;
 }
 
 .slogan-image {
@@ -47,36 +38,18 @@ header {
     height: 100%; /* Изображение будет растягиваться по высоте блока */
     object-fit: cover; /* Изображение будет обрезаться, если его пропорции не совпадают с блоком */
     position: absolute; /* Помещаем изображение в фон */
-    top: 0;
-    left: 0;
 
-}
-
-/* Текст слогана, по умолчанию скрыт */
-.slogan p {
-    font-size: 1.8rem;
-    font-style: italic;
-    color: transparent; /* Текст скрыт по умолчанию */
-    text-shadow: 0 0 5px rgba(255, 255, 255, 0.8); /* Легкое свечение текста */
-    transition: color 0.5s ease, opacity 0.5s ease; /* Плавный переход для цвета и прозрачности текста */
-    padding: 1rem;
-    position: relative;
-    z-index: 1; /* Помещаем текст поверх изображения */
-    opacity: 0; /* Текст полностью скрыт */
 }
 
 /* Псевдоэлемент для затемнения */
 .slogan::after {
     content: ''; /* Псевдоэлемент без текста */
     position: absolute;
-    top: 0;
-    left: 0;
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.7); /* Черное затемнение с прозрачностью */
     opacity: 0; /* Начальное состояние (не видно) */
     transition: opacity 0.5s ease; /* Плавный переход */
-    z-index: 0; /* Псевдоэлемент будет поверх изображения, но под текстом */
 }
 
 /* Эффект при наведении на изображение */
@@ -114,6 +87,15 @@ nav a {
     margin: 0 15px;
 }
 
+/* Стили для футера */
+footer {
+    background-color: #ffffff;
+    color: #080808;
+    text-align: center;
+    padding: 1rem;
+    margin-top: auto;
+}
+
 nav a:hover {
     text-decoration: underline;
 }
@@ -130,62 +112,11 @@ main {
     gap: 2rem;
 }
 
-/* Стили для карточек товаров */
-.product {
-    background-color: #fff;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    width: 250px;
-    padding: 1rem;
-    text-align: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.product-img {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
-}
-
-h3 {
-    font-size: 1.5rem;
-    margin: 1rem 0;
-}
-
 p {
     font-size: 1rem;
     margin-bottom: 0.5rem;
 }
 
-.price {
-    font-size: 1.2rem;
-    font-weight: bold;
-    color: #000000;
-}
-
-
-footer {
-    background-color: #ffffff;
-    color: #080808;
-    text-align: center;
-    padding: 1rem;
-    margin-top: auto; /* Это заставляет футер "прилипать" к низу страницы */
-}
-
-
-.product-table {
-    margin-left: auto;
-    margin-right: 0;
-    width: 80%; /* или нужная ширина */
-}
-
-
-/* Увеличение изображения при наведении */
-.product-table img.thumbnail {
-    width: 80px;
-    height: auto;
-    transition: transform 0.3s ease; /* Плавный переход */
-}
 
 .product-table img.thumbnail:hover {
     transform: scale(5); /* Увеличение до 2 раз */
@@ -201,8 +132,6 @@ footer {
     display: block; /* Чтобы избежать пробела под изображением */
     margin: 0 auto; /* Центрирование изображения по горизонтали */
 }
-
-
 
 /* Стили таблицы */
 .product-table {
@@ -239,26 +168,6 @@ footer {
     width: 120px; /* Устанавливаем ширину для цены */
 }
 
-
-/* Стиль для секции "О бренде" */
-.brand-section {
-    padding: 4rem 2rem;
-    background-color: #ffffff;
-    margin-bottom: 3rem;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-/* Заголовки для секций страницы "О бренде" */
-.brand-section h2 {
-    font-size: 2.5rem;
-    color: #141313;
-    margin-bottom: 1rem;
-    font-family: "Georgia", serif; /* Для выделения заголовков */
-}
-
-
-/* Стили для изображений в секции "О бренде" */
 .brand-section img {
     width: 40%;
     height: auto;
@@ -267,28 +176,6 @@ footer {
     margin-right: 2rem;
 }
 
-/* Стили для контейнера текста и изображения (контент слева/справа) */
-.brand-section .content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-/* Отступы для текста и изображения */
-.brand-section .content p {
-    width: 55%; /* Оставляем больше пространства для текста */
-}
-
-/* Стили для футера */
-footer {
-    background-color: #ffffff;
-    color: #080808;
-    text-align: center;
-    padding: 1rem;
-    margin-top: auto;
-}
-
-/* Стиль для секции "О бренде" */
 .brand-section {
     padding: 4rem 2rem;
     background-color: #ffffff;
@@ -297,7 +184,7 @@ footer {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Заголовки для секций страницы "О бренде" */
+/* History ... */
 .brand-section h2 {
     font-size: 2.5rem;
     color: #141313;
@@ -322,32 +209,3 @@ footer {
     gap: 2rem; /* Отступ между изображением и текстом */
 }
 
-/* Стили для изображения в секции "О бренде" */
-.brand-section img {
-    width: 40%;
-    height: auto;
-    border-radius: 8px;
-    object-fit: cover;
-}
-
-/* Отступы для текста */
-.brand-section .content p {
-    width: 100%; /* Оставляем больше пространства для текста */
-}
-
-/* Адаптивность для экрана */
-@media (max-width: 768px) {
-    .brand-section .content {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .brand-section img {
-        width: 80%; /* Изображение будет шире на маленьких экранах */
-        margin-bottom: 1rem; /* Отступ снизу от изображения */
-    }
-
-    .brand-section .content p {
-        width: 100%;
-    }
-}
